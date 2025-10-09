@@ -1,0 +1,45 @@
+<div>
+  <h1>Calculadora de distancias</h1>
+  <form [formGroup]="formulario">
+    <div class="mb-3 container">
+      <div class="row">
+        <div class="col-1">
+          <label for="x1" class="form-label">x1</label>
+        </div>
+        <div class="col-3">
+          <input type="number" class="form-control" id="x1" formControlName="x1">
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-1">
+          <label for="y" class="form-label">y1</label>
+        </div>
+        <div class="col-3">
+          <input type="number" class="form-control" id="y1" formControlName="y1">
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-1">
+          <label for="x2" class="form-label">x2</label>
+        </div>
+        <div class="col-3">
+          <input type="number" class="form-control" id="x2" formControlName="x2">
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-1">
+          <label for="y2" class="form-label">y2</label>
+        </div>
+        <div class="col-3">
+          <input type="number" class="form-control" id="y2" formControlName="y2">
+        </div>
+      </div>
+      <br>
+      <button class="btn btn-primary" (click)="proceder()">Calcular distancia</button>
+      <h2>Resultado: {{resultado}}</h2>
+    </div>
+  </form>
+</div>
