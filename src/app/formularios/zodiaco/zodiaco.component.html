@@ -1,0 +1,74 @@
+<body>
+  <form [formGroup]="formulario">
+      <h1>Datos personales</h1>
+  <div class="row">
+    <div class="col">
+    <div class="row">
+      <div class="col-2">Nombre</div>
+      <div class="col-5"><input formControlName="nombre" type="text"></div>
+    </div>
+    <div class="row">
+      <div class="col-2">Apaterno</div>
+      <div class="col-5"><input formControlName="aPaterno" type="text"></div>
+    </div>
+    <div class="row">
+      <div class="col-2">Amaterno</div>
+      <div class="col-5"><input formControlName="aMaterno" type="text"></div>
+    </div>
+
+    <h2>Fecha de nacimiento</h2>
+    <div class="row">
+      <div class="col-3">
+        <div class="row">
+          <h4>Dia</h4>
+          <input class="col-11" formControlName="dia" type="number" name="" id="">
+        </div>
+      </div>
+
+      <div class="col-3">
+        <div class="row">
+          <h4>Mes</h4>
+          <input class="col-11" formControlName="mes" type="number" name="" id="">
+        </div>
+      </div>
+
+      <div class="col-3">
+        <div class="row">
+          <h4>Año</h4>
+          <input class="col-11" formControlName="anno" type="number" name="" id="">
+        </div>
+      </div>
+
+    </div>
+
+    <div class="row">
+      <h4>sexo</h4>
+      <div class="row">
+        <input formControlName="sexo" class="col-1" type="radio" name="sexo" id="masculino" value="masculino"><label class="col-6" for="masculino">masculino</label>
+      </div>
+      <div class="row">
+        <input formControlName="sexo" class="col-1" type="radio" name="sexo" id="femenino" value="femenino"><label class="col-6" for="femenino">femenino</label>
+      </div>
+
+
+    </div>
+
+    <div>
+      <button class="btn btn-primary" (click)="Proceed()">Calcular</button>
+    </div>
+  </div>
+
+  <div class="col">
+    <h3>{{textNombre}}</h3>
+    <h3>{{textEdad}}</h3>
+    <h3>{{textSigno}}</h3>
+    <div>
+      <img src="{{imagenSigno}}" alt="" width="300" height="200">
+    </div>
+  </div>
+
+  </div>
+  </form>
+
+
+</body>
