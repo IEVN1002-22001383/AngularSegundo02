@@ -1,74 +1,167 @@
 <body>
   <form [formGroup]="formulario">
-      <h1>Datos personales</h1>
-  <div class="row">
-    <div class="col">
-    <div class="row">
-      <div class="col-2">Nombre</div>
-      <div class="col-5"><input formControlName="nombre" type="text"></div>
-    </div>
-    <div class="row">
-      <div class="col-2">Apaterno</div>
-      <div class="col-5"><input formControlName="aPaterno" type="text"></div>
-    </div>
-    <div class="row">
-      <div class="col-2">Amaterno</div>
-      <div class="col-5"><input formControlName="aMaterno" type="text"></div>
-    </div>
-
-    <h2>Fecha de nacimiento</h2>
-    <div class="row">
-      <div class="col-3">
+    <h1 class="mb-4 text-4xl font-extrabold tracking-tight text-gray-900 md:text-5xl lg:text-6xl dark:text-white">ZODIACO CHINO</h1>
+    <h1 class="block mb-2 font-medium text-gray-900 dark:text-white">
+      Datos personales
+    </h1>
+    <div class="grid gap-6 mb-6 ms-6 md:grid-cols-2">
+      <div class="col">
+        <div>
+          <div
+            class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+          >
+            Nombre
+          </div>
+          <div class="">
+            <input
+              formControlName="nombre"
+              type="text"
+              class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+            />
+          </div>
+        </div>
         <div class="row">
-          <h4>Dia</h4>
-          <input class="col-11" formControlName="dia" type="number" name="" id="">
+          <div
+            class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+          >
+            Apaterno
+          </div>
+          <div class="col-5">
+            <input
+              formControlName="aPaterno"
+              type="text"
+              class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+            />
+          </div>
+        </div>
+        <div class="row">
+          <div
+            class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+          >
+            Amaterno
+          </div>
+          <div class="col-5">
+            <input
+              formControlName="aMaterno"
+              type="text"
+              class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+            />
+          </div>
+        </div>
+
+        <h2
+          class="block mb-2 font-medium text-gray-900 dark:text-white"
+        >
+          Fecha de nacimiento
+        </h2>
+        <div class="grid gap-6 mb-6 md:grid-cols-3">
+          <div class="">
+            <div class="">
+              <h4
+                class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+              >
+                Dia
+              </h4>
+              <input
+                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                formControlName="dia"
+                type="number"
+                name=""
+                id=""
+              />
+            </div>
+          </div>
+
+          <div class="">
+            <div class="">
+              <h4
+                class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+              >
+                Mes
+              </h4>
+              <input
+                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                formControlName="mes"
+                type="number"
+                name=""
+                id=""
+              />
+            </div>
+          </div>
+
+          <div class="">
+            <div class="">
+              <h4
+                class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+              >
+                Año
+              </h4>
+              <input
+                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                formControlName="anno"
+                type="number"
+                name=""
+                id=""
+              />
+            </div>
+          </div>
+        </div>
+
+        <div class="">
+          <h4
+            class="block mb-2 font-medium text-gray-900 dark:text-white"
+          >
+            sexo
+          </h4>
+          <div class="flex items-center">
+            <input
+              formControlName="sexo"
+              class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
+              type="radio"
+              name="sexo"
+              id="masculino"
+              value="masculino"
+            /><label class="ms-2 text-sm font-medium text-gray-900 dark:text-gray-300" for="masculino">masculino</label>
+          </div>
+          <div class="flex items-center">
+            <input
+              formControlName="sexo"
+              class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
+              type="radio"
+              name="sexo"
+              id="femenino"
+              value="femenino"
+            /><label class="ms-2 text-sm font-medium text-gray-900 dark:text-gray-300" for="femenino">femenino</label>
+          </div>
+        </div>
+
+        <div>
+          <button class="relative inline-flex items-center justify-center p-0.5 mb-2 me-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-cyan-500 to-blue-500 group-hover:from-cyan-500 group-hover:to-blue-500 hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-cyan-200 dark:focus:ring-cyan-800" (click)="Proceed()">
+            <span class="relative px-5 py-2.5 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-md group-hover:bg-transparent group-hover:dark:bg-transparent">Calcular</span>
+          </button>
         </div>
       </div>
 
-      <div class="col-3">
-        <div class="row">
-          <h4>Mes</h4>
-          <input class="col-11" formControlName="mes" type="number" name="" id="">
+      <div class="">
+        <h3
+          class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+        >
+          {{ textNombre }}
+        </h3>
+        <h3
+          class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+        >
+          {{ textEdad }}
+        </h3>
+        <h3
+          class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+        >
+          {{ textSigno }}
+        </h3>
+        <div>
+          <img src="{{ imagenSigno }}" alt="" width="300" height="200" />
         </div>
       </div>
-
-      <div class="col-3">
-        <div class="row">
-          <h4>Año</h4>
-          <input class="col-11" formControlName="anno" type="number" name="" id="">
-        </div>
-      </div>
-
     </div>
-
-    <div class="row">
-      <h4>sexo</h4>
-      <div class="row">
-        <input formControlName="sexo" class="col-1" type="radio" name="sexo" id="masculino" value="masculino"><label class="col-6" for="masculino">masculino</label>
-      </div>
-      <div class="row">
-        <input formControlName="sexo" class="col-1" type="radio" name="sexo" id="femenino" value="femenino"><label class="col-6" for="femenino">femenino</label>
-      </div>
-
-
-    </div>
-
-    <div>
-      <button class="btn btn-primary" (click)="Proceed()">Calcular</button>
-    </div>
-  </div>
-
-  <div class="col">
-    <h3>{{textNombre}}</h3>
-    <h3>{{textEdad}}</h3>
-    <h3>{{textSigno}}</h3>
-    <div>
-      <img src="{{imagenSigno}}" alt="" width="300" height="200">
-    </div>
-  </div>
-
-  </div>
   </form>
-
-
 </body>

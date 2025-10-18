@@ -4,10 +4,13 @@ import { DistanciaComponent } from "./formularios/distancia/distancia.component"
 import { ZodiacoComponent } from './formularios/zodiaco/zodiaco.component';
 import { initFlowbite } from 'flowbite';
 import { NavbarComponent } from './navbar/navbar.component';
+import { AgregarComponent } from "./utl/agregar/agregar.component";
+import { TemhComponent } from "./tem/temh/temh.component";
+import { TempComponent } from "./tem/temp/temp.component";
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, DistanciaComponent, ZodiacoComponent, NavbarComponent],
+  imports: [RouterOutlet, NavbarComponent, TemhComponent, TempComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
